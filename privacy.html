@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DRB Newsletter Mac의 Gmail 데이터 접근, 이용, 저장, 전송 및 삭제 요청 안내">
+  <meta name="referrer" content="no-referrer">
+  <title>개인정보처리방침 — DRB Newsletter Mac</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, sans-serif; color: #182638; background: #f5f7fa; line-height: 1.8; }
+    body { margin: 0; } main { max-width: 760px; margin: 48px auto; padding: 40px; background: white; border: 1px solid #dce3ec; border-radius: 16px; }
+    h1 { font-size: 1.9rem; line-height: 1.4; } h2 { margin-top: 32px; font-size: 1.2rem; } a { color: #174ea6; text-underline-offset: 3px; }
+    footer { color: #53657a; font-size: .9rem; } code { overflow-wrap: anywhere; } li { margin-bottom: 10px; }
+    @media (max-width: 600px) { main { margin: 16px; padding: 24px; } h1 { font-size: 1.6rem; } }
+  </style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">← 앱 안내</a></p>
+  <h1>DRB Newsletter Mac<br>개인정보처리방침</h1>
+  <p>이 방침은 DRB 내부 뉴스레터 운영용 앱인 DRB Newsletter Mac이 Google 계정과 메일 자료를 처리하는 방법을 설명합니다.</p>
+  <h2>접근하는 정보와 목적</h2>
+  <p>계정 확인에 필요한 이메일 주소, 수집 대상 메일 및 발송 확인 대상 메일의 제목·발신자·수신자·날짜·본문·메시지 ID·발송 상태를 처리합니다. 수집 대상 알림 메일의 기사 정보는 뉴스레터 작성에 사용하고, 보낸 메일은 중복 검사와 발송 결과 검증에 사용합니다.</p>
+  <p><code>gmail.readonly</code>는 메일 읽기에, <code>gmail.send</code>는 지정된 수신자에게 뉴스레터를 보내는 데 사용합니다. Google이 부여하는 읽기 권한은 메일함 전체에 적용되지만, 앱의 조회는 뉴스레터 운영에 필요한 범위로 제한합니다.</p>
+  <h2>처리와 저장</h2>
+  <p>공식 Gmail API를 사용하는 전송 프로그램(<code>deliver.py</code>)이 발송 전 기존 원장과 보낸 메일을 대조합니다. 발송 후에는 Google이 반환한 메시지 ID, 저장된 메일 본문, 중복 여부를 확인합니다. 발송 결과가 불명확하면 자동으로 재발송하지 않습니다.</p>
+  <p>수집 자료, 발행 문서, 메일 본문과 검증 응답, 메시지 ID, 본문 해시 및 실행 기록은 운영자가 관리하는 로컬 저장소와 발송 원장에 보관합니다. OAuth 인증 정보는 접근을 제한한 별도 파일에 저장하며 공개 저장소나 이 안내 사이트에 올리지 않습니다. Google과의 API 통신에는 HTTPS를 사용합니다.</p>
+  <h2>전송과 외부 서비스</h2>
+  <p>뉴스레터 메일은 Google Gmail을 통해 지정된 수신자에게 전달됩니다. 발행용으로 선택·검토한 기사 정보와 요약은 뉴스레터와 발행 웹페이지에 포함될 수 있습니다. 메일함 전체나 인증 정보를 공개하는 용도로 사용하지 않습니다.</p>
+  <p>운영자가 OpenAI Codex 등 연결된 도구로 수집·검토 작업을 수행할 때 해당 작업에 필요한 메일·기사 정보가 그 서비스에서 처리될 수 있습니다. 이 앱은 Google 사용자 데이터를 판매하거나 광고 타기팅 및 범용 AI 모델 학습에 사용하는 기능을 제공하지 않습니다. Google API에서 받은 정보의 이용 및 다른 앱으로의 전송은 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>의 Limited Use 요구사항을 따릅니다.</p>
+  <h2>보관과 삭제 요청</h2>
+  <p>자료와 발송 기록은 뉴스레터 운영, 오류 확인 및 중복 방지에 필요한 동안 보관합니다. 현재 일괄 자동 삭제 주기는 설정되어 있지 않습니다. 삭제 요청은 아래 연락처로 접수할 수 있으며, 운영 기록과 백업을 포함한 처리 범위 및 완료 여부를 확인해 안내합니다.</p>
+  <p>Google 계정의 <a href="https://myaccount.google.com/connections">서드 파티 연결 관리</a>에서 앱 접근을 철회할 수 있습니다. 접근 철회만으로 이미 로컬에 보관된 자료가 자동 삭제되지는 않습니다. 로컬 자료 삭제가 필요하면 별도로 요청해 주세요.</p>
+  <h2>이 안내 사이트</h2>
+  <p>이 사이트는 앱 소개와 개인정보처리방침만 공개하며 로그인 양식, 메일 업로드, 자체 분석·광고 추적 기능을 제공하지 않습니다. 호스팅 제공자인 GitHub는 보안 목적으로 방문자의 IP 주소 등 접속 정보를 처리할 수 있습니다. 자세한 내용은 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 개인정보처리방침</a>을 참고해 주세요.</p>
+  <h2>연락처와 변경</h2>
+  <p>운영 및 개인정보 문의: <a href="mailto:drb.bp.team@gmail.com">drb.bp.team@gmail.com</a></p>
+  <p>처리 방식이 변경되면 이 페이지의 내용과 수정일을 갱신합니다.</p>
+  <footer>최종 수정: 2026-10-30 · <a href="index.html">앱 안내</a></footer>
+</main>
+</body>
+</html>
